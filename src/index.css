@@ -182,3 +182,48 @@ input {
 .btn-secondary:hover:not(:disabled) {
   background-color: #6d28d9; /* violet-700 */
 }
+
+/* Fallback styles */
+#root:empty {
+  display: none;
+}
+
+#loading-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  flex-direction: column;
+}
+
+#loading-fallback .spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid #e5e7eb;
+  border-radius: 50%;
+  border-top-color: #4f46e5;
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#javascript-disabled {
+  display: none;
+}
+
+.noscript #javascript-disabled {
+  display: block;
+  padding: 20px;
+  text-align: center;
+  color: #991b1b;
+  background-color: #fee2e2;
+  border-radius: 4px;
+  margin: 20px;
+}
