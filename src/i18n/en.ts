@@ -1,0 +1,87 @@
+// Define the TranslationDictionary type directly to avoid circular import
+type TranslationDictionary = {
+  [key: string]: string | TranslationDictionary;
+};
+
+// Dictionary tiếng Anh
+export const en: TranslationDictionary = {
+  common: {
+    welcome: 'Welcome!',
+    loading: 'Loading...',
+    error: 'An error occurred',
+    success: 'Success',
+    confirm: 'Confirm',
+    cancel: 'Cancel',
+    save: 'Save',
+    edit: 'Edit',
+    delete: 'Delete',
+    back: 'Back',
+    next: 'Next',
+    previous: 'Previous',
+    close: 'Close',
+    search: 'Search',
+    filter: 'Filter',
+    sort: 'Sort',
+    clear: 'Clear',
+    reset: 'Reset',
+    submit: 'Submit',
+    yes: 'Yes',
+    no: 'No',
+  },
+  auth: {
+    login: {
+      title: 'Sign In',
+      subtitle: 'Access your account',
+      username: 'Username',
+      password: 'Password',
+      remember: 'Remember me',
+      forgot: 'Forgot password?',
+      submit: 'Sign In',
+      loading: 'Signing in...',
+      success: 'Login successful! Welcome {{name}}',
+      noAccount: "Don't have an account?",
+      signup: 'Sign up',
+      testAccount: 'Test Account',
+      quickLogin: 'Quick login with this account',
+      welcomeBack: 'Welcome Back',
+      welcomeMessage: 'Sign in to your account to continue where you left off.',
+      passwordStrength: 'Password Strength',
+      passwordWeak: 'Weak',
+      passwordMedium: 'Medium',
+      passwordStrong: 'Strong',
+      showPassword: 'Show password',
+      hidePassword: 'Hide password',
+      formReady: 'Form is valid, you can sign in now',
+    },
+    validation: {
+      required: '{{field}} is required',
+      minLength: '{{field}} must be at least {{length}} characters',
+      invalidCredentials: 'Invalid username or password',
+      checkUsername: 'Please check your username and password',
+      ensureCorrectInfo: 'Make sure you are using the correct login information',
+      apiUnavailable: 'If the error persists, the DummyJSON API may be temporarily unavailable',
+    },
+    errors: {
+      serverError: 'Server error ({{status}}): {{message}}',
+      connectionError: 'Could not connect to the server. Please check your network connection and try again',
+    },
+  },
+  dashboard: {
+    title: 'Dashboard',
+    welcome: 'Welcome!',
+    loggedInAs: "You're logged in as",
+    logout: 'Logout',
+    profile: {
+      title: 'Your Profile Information',
+      username: 'Username',
+      name: 'Name',
+      email: 'Email',
+      noInfo: 'No user information available',
+    },
+  },
+  languageSwitcher: {
+    title: 'Language',
+    vi: 'Vietnamese',
+    en: 'English',
+  },
+};
